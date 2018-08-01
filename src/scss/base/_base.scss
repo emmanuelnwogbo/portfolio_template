@@ -6,8 +6,15 @@
   box-sizing: inherit;
 }
 
+html {
+  font-size: 112.5%;
+}
+
 body {
   box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  min-height: 200vh; //production
 }
 
 ::selection {}

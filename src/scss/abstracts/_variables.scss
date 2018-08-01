@@ -1,0 +1,16 @@
+//colors
+$primary-color-1: #22313F;
+$primary-color-2: rgba(102, 24, 190, 0.9);
+$primary-color-3: rgba(213, 24, 190, 0.6);
+$color-grey-dark: #777;
+$color-grey-dark-2: #333;
+$header-background-gradient: linear-gradient(rgba(238, 238, 238, 0.7), rgba(238, 238, 238, 0.7));
+$btn-hover-background: linear-gradient(to right bottom, rgba(220, 24, 190, 0.6), rgba(110, 24, 190, 0.9));
+//fonts
+$primary-font: 'Roboto Mono',
+monospace;
+//box-shadows
+$btn-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+$btn-hover-box-shadow: 0 1.5rem 4rem rgba(213, 24, 190, 0.4);
+//transition
+$primary-transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
