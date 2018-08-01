@@ -14,7 +14,10 @@ body {
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
-  min-height: 200vh; //production
+  background: $white;
 }
 
-::selection {}
+::selection {
+  background-color: $primary-color-3;
+  color: $white;
+}

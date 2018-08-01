@@ -25,3 +25,22 @@ body {
     font-size: 80%;
   }
 }
+
+.about {
+  font-size: 87%;
+  &__bio {
+    width: 50%;
+    text-align: left;
+  }
+  &__bio-h3 {
+    font-size: 170%;
+    font-weight: 700
+  }
+  &__bio-h4 {
+    font-weight: 700;
+  }
+  &__skills-h4 {
+    font-weight: 700;
+    font-size: 120%;
+  }
+}
