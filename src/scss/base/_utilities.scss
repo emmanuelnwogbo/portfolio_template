@@ -1,6 +1,14 @@
 .btn {
   color: #fff;
   outline: none;
+  border-radius: 2.5rem;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  letter-spacing: .1rem;
+  padding: .6rem;
   background: linear-gradient(to right bottom, $primary-color-3, $primary-color-2);
   box-shadow: $btn-box-shadow;
   transition: $primary-transition;
@@ -9,5 +17,6 @@
     transform: translateY(-.3rem);
     background: $btn-hover-background;
     box-shadow: $btn-hover-box-shadow;
+    animation: none;
   }
 }

@@ -1,11 +1,14 @@
 .about {
   position: relative;
+  overflow: hidden;
   padding: 2rem 0;
-  padding-top: 8.5rem;
+  padding-top: 5rem;
   margin: 0 auto;
   width: 80%;
+  min-height: 80vh;
   &__bio {
     width: 45%;
+    height: 100%;
     text-align: left;
     padding: 1.5rem;
   }
@@ -30,15 +33,25 @@
     width: 1rem;
     transform: translateY(.1rem);
   }
+  &__contact-btn {
+    margin-top: 1.5rem;
+    width: 30%;
+    padding: .4rem !important;
+    animation: bounce .9s linear 1s infinite;
+  }
   &__socials {
     margin-top: 2rem;
-    width: 40%;
+    width: 50%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    align-content: space-around;
     box-shadow: $btn-hover-box-shadow;
     padding: .3rem;
     &-icon {
+      padding: 0;
+      margin: 0 .5rem;
+      border: 0;
       fill: $primary-color-3;
       width: 1.5rem;
       height: 1.5rem;
@@ -51,13 +64,14 @@
   }
   &__skills {
     position: absolute;
+    overflow: hidden;
     top: 0;
     right: 0;
     width: 45%;
     height: 100%;
     text-align: left;
-    padding: 1.5rem;
-    padding-top: 7rem;
+    padding: .7rem;
+    padding-top: 6rem;
     color: $white;
     display: flex;
     flex-direction: column;
@@ -78,8 +92,8 @@
     align-self: center;
     text-transform: uppercase;
     padding: .5rem 0;
-    color: $primary-color-1;
-    width: 20%;
+    color: $white;
+    width: 60%;
   }
   &__skills-h4::before {
     content: '';
@@ -87,8 +101,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 10%;
-    background: $primary-color-1;
+    height: 4%;
+    background: $white;
   }
   &__skills-h4::after {
     content: '';
@@ -96,7 +110,22 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 10%;
-    background: $primary-color-1;
+    height: 4%;
+    background: $white;
+  }
+  &__skills-list {
+    margin-top: 1.3%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  &__skills-icon {
+    padding: 0;
+    margin: .5rem;
+    border: 0;
+    height: 5rem;
+    width: 5rem;
+    transform: translateY(.1rem);
   }
 }

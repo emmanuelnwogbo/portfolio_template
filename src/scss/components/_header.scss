@@ -72,16 +72,7 @@
   &__intro-btn:link,
   &__intro-btn:visited {
     margin-top: 1.5rem;
-    position: relative;
-    letter-spacing: .1rem;
-    padding: .6rem;
     width: 26%;
-    max-width: 26%;
-    border-radius: 2.5rem;
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
   }
   &__intro-btn:hover {}
 }
