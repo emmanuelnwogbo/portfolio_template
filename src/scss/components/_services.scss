@@ -1,0 +1,43 @@
+.services {
+  @include baseSectionStyle;
+  background: $header-background-gradient;
+  width: 100%;
+  height: 130vh;
+  &__content {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__header {
+    color: $primary-color-1;
+    margin-bottom: .9rem;
+  }
+  &__cards {
+    width: 100%;
+    height: 85%;
+    @include baseFlexStyle;
+  }
+  &__cards-card {
+    padding: .6rem;
+    background: $white;
+    z-index: 1;
+    width: 29%;
+    height: 45%;
+    box-shadow: 0 1px 27px -3px rgba(0, 0, 0, .2);
+    border-radius: $border-radius-1;
+  }
+  &__card-header {
+    color: $primary-color-1;
+    text-transform: uppercase;
+    margin-bottom: .9rem;
+  }
+  &-icon {
+    fill: rgba($primary-color-3, 0.7);
+    padding: 0;
+    margin: .5rem;
+    border: 0;
+    height: 4rem;
+    width: 4rem
+  }
+}

@@ -10,13 +10,13 @@
   position: relative;
   &__title {
     color: $primary-color-2;
-    margin: 0 3rem;
+    margin: 0 7rem;
     cursor: pointer;
     transition: $primary-transition
   }
   &__nav {
     position: absolute;
-    width: 40%;
+    width: 35%;
     right: 10%;
     top: 1%;
   }
@@ -75,4 +75,27 @@
     width: 26%;
   }
   &__intro-btn:hover {}
+  &__intro-mouse,
+  &__intro-mouse:link,
+  &__intro-mouse:visited {
+    color: #fff;
+    outline: none;
+    width: 1.5rem;
+    height: 2.5rem;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin-top: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    border-radius: 15px;
+    border: 3px solid #fff;
+    background: rgba($color-grey-dark-2, 0.8);
+    @include bounce;
+  }
+  &__intro-mouse:hover {
+    cursor: pointer;
+    animation: none;
+  }
 }

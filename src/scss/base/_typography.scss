@@ -44,3 +44,18 @@ body {
     font-size: 120%;
   }
 }
+
+.services {
+  &__header {
+    font-size: 190%;
+    font-weight: 700;
+  }
+  &__card-header {
+    font-weight: 700;
+    font-size: 100%;
+  }
+  &__card-paragraph {
+    font-weight: 200;
+    font-size: 78%;
+  }
+}
