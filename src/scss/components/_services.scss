@@ -20,12 +20,17 @@
   }
   &__cards-card {
     padding: .6rem;
+    padding-top: 1rem;
     background: $white;
     z-index: 1;
     width: 29%;
     height: 45%;
     box-shadow: 0 1px 27px -3px rgba(0, 0, 0, .2);
     border-radius: $border-radius-1;
+    transition: $primary-transition;
+  }
+  &__cards-card:hover .services-icon {
+    transform: translateY(-.4rem) scale(1.1);
   }
   &__card-header {
     color: $primary-color-1;
@@ -38,6 +43,7 @@
     margin: .5rem;
     border: 0;
     height: 4rem;
-    width: 4rem
+    width: 4rem;
+    transition: $primary-transition;
   }
 }
