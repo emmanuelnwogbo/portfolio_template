@@ -27,10 +27,11 @@
     height: 45%;
     box-shadow: 0 1px 27px -3px rgba(0, 0, 0, .2);
     border-radius: $border-radius-1;
-    transition: $primary-transition;
+    transition: $primary-transition
   }
   &__cards-card:hover .services-icon {
     transform: translateY(-.4rem) scale(1.1);
+    fill: rgba($primary-color-1, 0.7);
   }
   &__card-header {
     color: $primary-color-1;
