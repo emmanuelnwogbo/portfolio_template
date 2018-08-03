@@ -59,3 +59,22 @@ body {
     font-size: 78%;
   }
 }
+
+.reviews {
+  &__header {
+    font-weight: 700;
+    font-size: 160%;
+  }
+  &__header-sub {
+    font-weight: 400;
+    font-size: 90%;
+  }
+  &__item-name {
+    font-weight: 700;
+    font-size: 100%;
+  }
+  &__item-content {
+    font-weight: 200;
+    font-size: 75%;
+  }
+}
