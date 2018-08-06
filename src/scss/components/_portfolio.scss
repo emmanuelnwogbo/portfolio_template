@@ -1,0 +1,107 @@
+.portfolio {
+  @include baseSectionStyle;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  background: $header-background-gradient;
+  width: 100%;
+  text-align: center;
+  &__header {
+    width: 50%;
+    align-self: center;
+    margin: 1rem;
+    color: $primary-color-1;
+  }
+  &__header-sub {
+    width: 42%;
+    align-self: center;
+    margin-bottom: 1.5rem;
+  }
+  &__categories {
+    display: flex;
+    align-self: center;
+    justify-content: space-evenly;
+    width: 40%;
+    list-style: none;
+    margin-bottom: 1.8rem;
+    padding: 2.5rem 2rem;
+    transform: translateX(-.2rem) translateY(-1rem);
+  }
+  &__categories-item {
+    display: inline-block;
+  }
+  &__category,
+  &__category:link,
+  &__category:visited {
+    display: inline-block;
+    color: $primary-color-1;
+    background: $white;
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 27px -3px rgba(0, 0, 0, .2);
+    padding: .5rem 1rem;
+    border-radius: 3rem;
+    backface-visibility: hidden;
+    transition: $primary-transition;
+    &:hover {
+      color: $white;
+      background: transparent;
+      transform: translateY(-.2rem)
+    }
+  }
+  &__category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($primary-color-3, 0.7);
+    border-radius: 3rem;
+    z-index: -1;
+    transform: scale(0);
+    backface-visibility: hidden;
+    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  &__category:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 50;
+    right: 50;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.0);
+    border-radius: 3rem;
+  }
+  &__items {
+    width: 80%;
+    margin: 0 auto;
+    transform: translateY(-3.5rem);
+  }
+  &__items-container {
+    position: relative;
+    width: 100%;
+    background: green;
+    min-height: 40vh;
+    overflow-x: hidden;
+    &>* {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: orangered;
+    }
+    &-child1 {
+      height: 20vh;
+      z-index: 8000;
+    }
+    &-child2 {
+      height: 80vh;
+      background: blue !important;
+    }
+  }
+}

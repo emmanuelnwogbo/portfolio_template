@@ -1,7 +1,9 @@
-.btn {
-  color: #fff;
+.btn,
+.btn:link,
+.btn:visited {
+  color: $white;
   outline: none;
-  border-radius: 2.5rem;
+  border-radius: 3rem;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
