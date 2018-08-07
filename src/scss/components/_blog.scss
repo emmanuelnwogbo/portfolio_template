@@ -4,6 +4,8 @@
   width: 80%;
   transform: translateY(-6rem);
   text-align: center;
+  z-index: 2000;
+  background: transparent;
   &__header {
     color: $primary-color-1;
     &-sub {
@@ -16,6 +18,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background: transparent;
   }
   &__card {
     flex-basis: 30%;
@@ -23,6 +26,7 @@
     text-align: left;
     border-radius: .2rem;
     box-shadow: 0 1px 27px -3px rgba(0, 0, 0, .2);
+    background: $white;
     &-text {
       padding: 1.5rem;
     }

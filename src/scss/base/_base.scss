@@ -11,10 +11,21 @@ html {
 }
 
 body {
+  position: relative;
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
   background: $white;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 35vh;
+    background: $primary-color-1;
+    z-index: -1
+  }
 }
 
 ::selection {
