@@ -84,8 +84,8 @@
         </use>
       </use>
 
-      <a href="#" class="btn about__contact-btn">contact me</a>
-
+      <a href="#" class="btn about__contact-btn" id="about__contact-btn">contact me</a>
+      <input type="checkbox" class="about__flipper" id="about__flipper">
       <div class="about__skills">
         <h3 class="about__skills-h4">some technologies I've used</h3>
         <div class="about__skills-list">
@@ -171,6 +171,39 @@
           </div>
         </div>
       </div>
+
+      <div class="about__contact">
+        <h3 class="about__contact-h3">contact me</h3>
+        <div class="about__contact-formarea">
+          <form action="#" class="about__contact-form">
+            <div class="about__contact-inputarea">
+              <input type="text" class="about__contact-input" placeholder="Full Name" id="fullname" required>
+              <label for="fullname" class="about__contact-label">Full name</label>
+            </div>
+            <div class="about__contact-inputarea">
+              <input type="email" class="about__contact-input" placeholder="Email" id="email" required>
+              <label for="email" class="about__contact-label">Email</label>
+            </div>
+            <div class="about__contact-inputarea">
+              <input type="text" class="about__contact-input" placeholder="Subject" id="subject" required>
+              <label for="subject" class="about__contact-label">Subject</label>
+            </div>
+            <div class="about__contact-descriptionarea">
+              <textarea class="about__contact-description" row="6" col="50" placeholder="Clear Description of your Project" id="description"
+                required autofocus></textarea>
+              <label for="description" class="about__contact-label">Project Description</label>
+            </div>
+            <div class="about__contact-btnarea">
+              <button class="about__form-btn">send</button>
+              <a href="#" class="about__form-return" id="about__form-return">
+                <span>&#171;</span>
+                back
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
   </section>
   <!--about ending-->
 

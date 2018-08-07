@@ -12,3 +12,18 @@
     transform: translateY(0);
   }
 }
+
+@keyframes shiggie {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-.2rem);
+  }
+  50% {
+    transform: translateX(.2rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
