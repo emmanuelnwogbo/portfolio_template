@@ -103,3 +103,31 @@ body {
     }
   }
 }
+
+.blog {
+  &__header {
+    font-weight: 700;
+    font-size: 160%;
+    &-sub {
+      font-weight: 400;
+      font-size: 90%;
+    }
+  }
+  &__details {
+    font-size: 62%
+  }
+  &__name {
+    font-weight: 500;
+  }
+  &__h4 {
+    font-weight: 500;
+    font-size: 100%;
+  }
+  &__preview {
+    font-size: 78%
+  }
+  &__btn {
+    font-size: 60%;
+    font-weight: 400;
+  }
+}
