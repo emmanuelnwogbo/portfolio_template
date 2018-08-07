@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  background: $header-background-gradient;
   width: 100%;
   text-align: center;
   &__header {
@@ -21,10 +20,10 @@
     display: flex;
     align-self: center;
     justify-content: space-evenly;
-    width: 40%;
+    width: 50%;
     list-style: none;
     margin-bottom: 1.8rem;
-    padding: 2.5rem 2rem;
+    padding: 2rem 2.5rem;
     transform: translateX(-.2rem) translateY(-1rem);
   }
   &__categories-item {
@@ -34,7 +33,7 @@
   &__category:link,
   &__category:visited {
     display: inline-block;
-    color: $primary-color-1;
+    color: rgba($primary-color-3, 0.7);
     background: $white;
     position: relative;
     outline: none;
@@ -77,31 +76,108 @@
     transform: scale(1.0);
     border-radius: 3rem;
   }
-  &__items {
-    width: 80%;
-    margin: 0 auto;
-    transform: translateY(-3.5rem);
-  }
-  &__items-container {
+  &__cards {
     position: relative;
+    overflow: hidden;
+    width: 80%;
+    height: 95vh;
+    align-self: center;
+    transform: translateY(-3rem);
+  }
+  &__cards-child {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    background: green;
-    min-height: 40vh;
-    overflow-x: hidden;
-    &>* {
+    height: 100%;
+    padding: .2rem;
+    display: flex;
+    flex-flow: row wrap;
+    place-content: start;
+  }
+  &__card {
+    width: 31%;
+    margin: .7rem;
+    padding: .5rem;
+    background: #fff;
+    border-radius: .1rem;
+    box-shadow: 0 1px 27px -3px rgba(0, 0, 0, .2);
+    overflow: hidden;
+    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    &:hover {
+      cursor: pointer;
+    }
+    &:hover &-fig::before {
+      width: 100%;
+    }
+    &:hover &-fig::after {
+      height: 50%;
+    }
+    &:hover &-figcaption {
+      transform: translate(0);
+      opacity: 1;
+    }
+    &:hover &-img {
+      transform: scale(1.0);
+      filter: blur(3px) brightness(80%);
+    }
+  }
+  &__card-fig {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    overflow: hidden;
+    &::before {
+      content: '';
       position: absolute;
       top: 0;
-      left: 0;
+      right: 0;
+      width: 0;
+      height: 50%;
+      background: rgba($primary-color-3, 0.5);
+      z-index: 2000;
+      transition: all .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+      padding: .5rem 0;
+      margin: 0;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
       width: 100%;
-      background: orangered;
+      height: 0;
+      background: rgba($primary-color-3, 0.5);
+      z-index: 2000;
+      transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
-    &-child1 {
-      height: 20vh;
-      z-index: 8000;
+  }
+  &__card-figcaption {
+    z-index: 2500;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    text-transform: uppercase;
+    color: $white;
+    opacity: 0;
+    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    &-header {
+      top: 40%;
+      transform: translateX(-800%);
     }
-    &-child2 {
-      height: 80vh;
-      background: blue !important;
+    &-sub {
+      bottom: 35%;
+      transform: translateY(800%);
     }
+  }
+  &__card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.1);
+    backface-visibility: hidden;
+    transition: all .2s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 }
