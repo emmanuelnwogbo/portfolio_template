@@ -141,7 +141,7 @@
     width: 45%;
     height: 100%;
     padding: .7rem .2rem;
-    padding-top: 6rem;
+    padding-top: 1.5rem;
     color: $white;
     transform: rotateY(180deg);
     opacity: 0;
@@ -151,59 +151,95 @@
     transition: all .3s cubic-bezier(.17, .67, .83, .67);
   }
   &__contact-h3 {
+    position: relative;
+    width: 30%;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: .5rem;
-    text-decoration: underline;
+    padding: .6rem 0;
+    margin: .7rem auto;
+    background: linear-gradient(to right bottom, rgba($primary-color-1, 0.8), rgba($primary-color-1, 0.8));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5%;
+      background: linear-gradient(to right bottom, rgba($primary-color-1, 0.8), rgba($primary-color-1, 0.8));
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5%;
+      background: linear-gradient(to right bottom, rgba($primary-color-1, 0.8), rgba($primary-color-1, 0.8));
+    }
   }
   &__contact-formarea {
     width: 100%;
-    height: 70%; //background: green;
+    height: 100%;
   }
   &__contact-form {
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
   }
   &__contact-inputarea {
-    width: 95%;
-    height: 18%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    width: 90%;
+    height: 12%;
+    margin: .2rem auto;
+    &>label {
+      padding-left: .6rem;
+      display: block;
+      transition: all .2s cubic-bezier(.17, .67, .83, .67);
+    }
   }
   &__contact-descriptionarea {
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center
+    position: relative;
+    width: 90%;
+    height: 20%;
+    margin: .5rem auto;
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60%;
+      background: rgba($white, .5);
+    }
+    &>label {
+      position: absolute;
+      top: 65%;
+      padding-left: .6rem
+    }
   }
   &__contact-btnarea {
-    width: 95%;
-    height: 13%;
+    height: 8%;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
   }
   &__contact-input {
-    height: 100%;
+    display: block;
     width: 100%;
-    display: inline-block;
-    outline: none;
+    height: 60%;
+    padding: .6rem;
     font-family: inherit;
-    padding: .6rem .8rem;
     border-radius: 2px;
     background-color: rgba($white, .5);
     border: none;
     border-bottom: 3px solid transparent;
-    margin-bottom: .3rem;
     transition: all .2s cubic-bezier(.17, .67, .83, .67);
     &::placeholder {
       color: $grey;
+      transition: all .2s cubic-bezier(.17, .67, .83, .67);
     }
     &:focus {
       outline: none;
@@ -222,32 +258,37 @@
     }
   }
   &__contact-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
     width: 100%;
+    height: 60%;
+    padding: .6rem;
     font-family: inherit;
-    padding: .6rem .8rem;
-    border: none;
     border-radius: 2px;
-    background-color: rgba($white, .5);
+    border: none;
     border-bottom: 3px solid transparent;
+    transition: all .2s cubic-bezier(.17, .67, .83, .67);
+    background: transparent;
     margin-bottom: .3rem;
-    overflow: hidden;
+    resize: none;
+    &::placeholder {
+      color: $grey
+    }
     &:focus {
       outline: none;
       box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
       border-bottom: 3px solid $primary-color-2;
-      margin-bottom: .6rem;
-      transform: translateY(.5rem);
     }
-  }
-  &__contact-label {
-    align-self: flex-start;
-    color: $white;
-    transition: all .2s cubic-bezier(.17, .67, .83, .67);
+    &:focus:invalid {
+      border-bottom: 3px solid $primary-color-3;
+    }
   }
   &__form-btn,
   &__form-btn:link,
   &__form-btn:visited {
-    width: 25%;
+    width: 20%;
     border: none;
     outline: none;
     padding: .7rem;
@@ -277,7 +318,7 @@
   &__form-return,
   &__form-return:link,
   &__form-return:visited {
-    width: 25%;
+    width: 20%;
     border: none;
     outline: none;
     padding: .7rem;
