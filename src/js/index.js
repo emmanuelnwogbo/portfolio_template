@@ -16,17 +16,3 @@ const aboutflipper = document.getElementById('about__flipper'),
     })
   })
 });
-
-/*[aboutContactBtn, aboutFormReturnBtn].forEach(btn => {
-  btn.addEventListener('click', function (e) {
-    e.preventDefault();
-    this.id !== 'about__form-return' ? aboutflipper.checked = true : aboutflipper.checked = false;
-  });
-});
-
-[leftReviewBtn, rightReviewBtn].forEach(btn => {
-  btn.addEventListener('click', function (e) {
-    e.preventDefault();
-    this.id === 'reviews__navigation-listitem-secondrow' ? reviewFlipper.checked = true : reviewFlipper.checked = false;
-  });
-});*/
