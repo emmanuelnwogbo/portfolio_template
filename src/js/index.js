@@ -4,9 +4,20 @@ const aboutflipper = document.getElementById('about__flipper'),
   aboutFormReturnBtn = document.getElementById('about__form-return'),
   leftReviewBtn = document.getElementById('reviews__navigation-listitem-firstrow'),
   rightReviewBtn = document.getElementById('reviews__navigation-listitem-secondrow'),
-  reviewFlipper = document.getElementById('reviews__flipper');
+  reviewFlipper = document.getElementById('reviews__flipper'),
+  aboutFlipBtns = [aboutFormReturnBtn, aboutContactBtn, aboutflipper],
+  reviewSlideBtns = [leftReviewBtn, rightReviewBtn, reviewFlipper];
 
-[aboutContactBtn, aboutFormReturnBtn].forEach(btn => {
+[aboutFlipBtns, reviewSlideBtns].forEach(arr => {
+  arr.forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      this.id !== arr[0].id ? arr[arr.length - 1].checked = true : arr[arr.length - 1].checked = false;
+    })
+  })
+});
+
+/*[aboutContactBtn, aboutFormReturnBtn].forEach(btn => {
   btn.addEventListener('click', function (e) {
     e.preventDefault();
     this.id !== 'about__form-return' ? aboutflipper.checked = true : aboutflipper.checked = false;
@@ -18,4 +29,4 @@ const aboutflipper = document.getElementById('about__flipper'),
     e.preventDefault();
     this.id === 'reviews__navigation-listitem-secondrow' ? reviewFlipper.checked = true : reviewFlipper.checked = false;
   });
-});
+});*/
