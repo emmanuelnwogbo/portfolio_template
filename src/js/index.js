@@ -6,7 +6,9 @@ const aboutflipper = document.getElementById('about__flipper'),
   rightReviewBtn = document.getElementById('reviews__navigation-listitem-secondrow'),
   reviewFlipper = document.getElementById('reviews__flipper'),
   aboutFlipBtns = [aboutFormReturnBtn, aboutContactBtn, aboutflipper],
-  reviewSlideBtns = [leftReviewBtn, rightReviewBtn, reviewFlipper];
+  reviewSlideBtns = [leftReviewBtn, rightReviewBtn, reviewFlipper],
+  portfolioCardsDiv = document.querySelector('.portfolio__cards');
+
 
 [aboutFlipBtns, reviewSlideBtns].forEach(arr => {
   arr.forEach(btn => {
@@ -16,3 +18,6 @@ const aboutflipper = document.getElementById('about__flipper'),
     })
   })
 });
+
+//console.log(portfolioCardsDiv.childNodes[1]);
+//portfolioCardsDiv.childNodes[1].style.transform = 'translateX(-50%)';
