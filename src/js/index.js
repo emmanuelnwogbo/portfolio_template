@@ -8,7 +8,8 @@ const aboutflipper = document.getElementById('about__flipper'),
   aboutFlipBtns = [aboutFormReturnBtn, aboutContactBtn, aboutflipper],
   reviewSlideBtns = [leftReviewBtn, rightReviewBtn, reviewFlipper],
   portfolioProjects = Array.from(document.getElementsByClassName('portfolio__card')),
-  categoryBtns = Array.from(document.getElementsByClassName('portfolio__categories-item'));
+  categoryBtns = Array.from(document.getElementsByClassName('portfolio__categories-item')),
+  portfolioCardSwitch = document.getElementById('portfolio__cards-switch');
 
 [aboutFlipBtns, reviewSlideBtns].forEach(arr => {
   arr.forEach(btn => {
@@ -19,21 +20,21 @@ const aboutflipper = document.getElementById('about__flipper'),
   });
 });
 
-categoryBtns.forEach(i => {
-  i.addEventListener('click', function (e) {
+categoryBtns.forEach(b => {
+  b.addEventListener('click', function (e) {
     e.preventDefault();
+    if (b.id === 'all' && portfolioCardSwitch.checked) {
+      return portfolioCardSwitch.checked = false;
+    }
+    if (b.id !== 'all' && !portfolioCardSwitch.checked) {
+      portfolioCardSwitch.checked = true;
+    }
     portfolioProjects.forEach(project => {
-      project.hidden = false;
-      project.style.transform = 'scale(0)';
-      setTimeout(function () {
-        project.style.opacity = 1;
-        project.style.transform = 'scale(1.0)';
-      }, 100);
-      if (project.dataset.category !== i.id && i.id !== 'all') {
-        project.style.transform = 'scale(0)';
-        setTimeout(function () {
-          project.hidden = true;
-        }, 100);
+      if (project.dataset.category !== b.id && b.id !== 'all' && !project.classList.contains('portfolio__card-test')) {
+        project.classList.add('portfolio__card-test');
+      }
+      if (project.dataset.category === b.id && b.id !== 'all' && project.classList.contains('portfolio__card-test')) {
+        project.classList.remove('portfolio__card-test');
       }
     })
   })

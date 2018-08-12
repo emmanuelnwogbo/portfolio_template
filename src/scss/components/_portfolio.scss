@@ -5,6 +5,18 @@
   justify-content: start;
   width: 100%;
   text-align: center;
+  &__cards-switch {
+    visibility: hidden;
+    z-index: -1;
+    position: absolute;
+  }
+  &__cards-switch:checked~&__card-test {
+    width: 0;
+    height: 0;
+    transform: scale(0);
+    margin: 0;
+    padding: 0;
+  }
   &__header {
     width: 50%;
     align-self: center;
@@ -93,6 +105,7 @@
     transition: $primary-transition;
   }
   &__card {
+    display: inline-block;
     width: 31%;
     margin: .7rem;
     padding: .5rem;
