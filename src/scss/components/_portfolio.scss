@@ -11,9 +11,10 @@
     position: absolute;
   }
   &__cards-switch:checked~&__card-test {
-    width: 0;
-    height: 0;
-    transform: scale(0);
+    //width: 0;
+    //height: 0;
+    transform: translateY(-100vh);
+    position: absolute;
     margin: 0;
     padding: 0;
   }
