@@ -22,6 +22,9 @@
     @media only screen and (max-width: 768px) {
       margin: 3rem 1rem
     }
+    @media only screen and (max-width: 360px) {
+      margin: 0rem 0rem
+    }
   }
   &__nav {
     position: absolute;
@@ -38,6 +41,12 @@
     }
     @media only screen and (max-width: 768px) {
       width: 40%;
+    }
+    @media only screen and (max-width: 694px) {
+      width: 45%
+    }
+    @media only screen and (max-width: 600px) {
+      display: none;
     }
   }
   &__nav-list {
@@ -88,6 +97,9 @@
     @media only screen and (max-width: 768px) {
       margin-top: 7rem;
     }
+    @media only screen and (max-width: 360px) {
+      margin-top: 5rem;
+    }
   }
   &__intro-h4 {}
   &__intro-h3 {
@@ -99,6 +111,9 @@
   &__intro-btn:visited {
     margin-top: 1.5rem;
     width: 26%;
+    @media only screen and (max-width: 360px) {
+      padding: .3rem;
+    }
   }
   &__intro-btn:hover {}
   &__intro-mouse,
@@ -123,6 +138,11 @@
       margin-top: 20%;
       height: 3.5rem;
       width: 2rem;
+    }
+    @media only screen and (max-width: 360px) {
+      margin-top: 15%;
+      height: 2.2rem;
+      width: 1.2rem;
     }
   }
   &__intro-mouse:hover {

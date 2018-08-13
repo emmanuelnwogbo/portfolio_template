@@ -20,6 +20,10 @@
     width: 45%;
     text-align: left;
     padding: 1.5rem;
+    @media only screen and (max-width: 360px) {
+      width: 100%;
+      padding: 0 1rem
+    }
   }
   &__bio-h3 {
     color: $primary-color-1;
@@ -44,9 +48,15 @@
   }
   &__contact-btn {
     margin-top: 1.5rem;
-    width: 30%;
+    width: 25%;
     padding: .4rem !important;
     @include bounce;
+    @media only screen and (max-width: 664px) {
+      width: 35%;
+    }
+    @media only screen and (max-width: 360px) {
+      width: 21%;
+    }
   }
   &__socials {
     margin-top: 2rem;
@@ -57,6 +67,9 @@
     align-content: space-around;
     box-shadow: $btn-hover-box-shadow;
     padding: .3rem;
+    @media only screen and (max-width: 360px) {
+      width: 40%;
+    }
     &-icon {
       padding: 0;
       margin: 0 .5rem;
@@ -65,6 +78,11 @@
       width: 1.5rem;
       height: 1.5rem;
       transition: all .4s cubic-bezier(.17, .67, .83, .67);
+      @media only screen and (max-width: 360px) {
+        height: 1rem;
+        width: 1rem;
+        margin: 0 .2rem;
+      }
       &:hover {
         cursor: pointer;
         transform: translateY(-.9rem) translateX(.3rem) scale(1.1);
@@ -89,6 +107,11 @@
     transition: all .3s cubic-bezier(.17, .67, .83, .67);
     @include respond(tab-land) {
       width: 50%;
+    }
+    @media only screen and (max-width: 360px) {
+      position: relative;
+      width: 100%;
+      padding-top: 2rem;
     }
   }
   &__skills-h4 {
@@ -147,6 +170,10 @@
       height: 3rem;
       width: 3rem;
     }
+    @media only screen and (max-width: 360px) {
+      height: 2rem;
+      width: 2rem;
+    }
   }
   &__contact {
     position: absolute;
@@ -167,6 +194,12 @@
     @include respond(tab-land) {
       width: 50%;
     }
+    @media only screen and (max-width: 360px) {
+      position: absolute;
+      width: 100%;
+      top: 56%;
+      height: 50%
+    }
   }
   &__contact-h3 {
     position: relative;
@@ -179,6 +212,10 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    @media only screen and (max-width: 360px) {
+      padding: .2rem 0;
+      margin: .2rem auto;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -212,6 +249,9 @@
     width: 90%;
     height: 12%;
     margin: .2rem auto;
+    @media only screen and (max-width: 360px) {
+      height: 13.5%;
+    }
     &>label {
       padding-left: .6rem;
       display: block;
@@ -325,6 +365,9 @@
     @include respond(tab-land) {
       width: 25%;
     }
+    @media only screen and (max-width: 360px) {
+      width: 20%;
+    }
     &:hover {
       cursor: pointer;
       transform: translateY(-.3rem);
@@ -363,6 +406,9 @@
     }
     @media only screen and (max-width: 768px) {
       width: 30%
+    }
+    @media only screen and (max-width: 360px) {
+      width: 20%;
     }
     &:hover {
       cursor: pointer;

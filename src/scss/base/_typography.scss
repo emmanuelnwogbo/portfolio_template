@@ -12,6 +12,9 @@ body {
     @include respond(tab-land) {
       font-size: 150%
     }
+    @media only screen and (max-width: 360px) {
+      font-size: 80%;
+    }
   }
   &__nav-list__item {
     font-size: 68%;
@@ -32,15 +35,27 @@ body {
     @include respond(tab-land) {
       font-size: 500%
     }
+    @media only screen and (max-width: 600px) {
+      font-size: 300%;
+    }
+    @media only screen and (max-width: 360px) {
+      font-size: 200%;
+    }
   }
   &__intro-h4 {
     @include respond(tab-land) {
       font-size: 130%
     }
+    @media only screen and (max-width: 360px) {
+      font-size: 70%;
+    }
   }
   &__intro-about {
     @include respond(tab-land) {
       font-size: 120%
+    }
+    @media only screen and (max-width: 360px) {
+      font-size: 60%;
     }
   }
   &__intro-btn,
@@ -51,12 +66,21 @@ body {
     @include respond(tab-land) {
       font-size: 95%
     }
+    @media only screen and (max-width: 600px) {
+      font-size: 80%;
+    }
+    @media only screen and (max-width: 360px) {
+      font-size: 35%;
+    }
   }
   &__intro-mouse,
   &__intro-mouse:link,
   &__intro-mouse:visited {
     @include respond(tab-land) {
       font-size: 150%
+    }
+    @media only screen and (max-width: 360px) {
+      font-size: 100%
     }
   }
 }
@@ -66,6 +90,9 @@ body {
   &__bio {
     @include respond(tab-land) {
       font-size: 100%
+    }
+    @media only screen and (max-width: 360px) {
+      font-size: 80%;
     }
   }
   &__bio-h3 {
@@ -77,12 +104,21 @@ body {
   }
   &__bio-h4 {
     font-weight: 700;
+    @media only screen and (max-width: 360px) {
+      font-size: 70%
+    }
   }
   &__contact-btn {
     @include respond(tab-land) {
       font-size: 80%
     }
     @media only screen and (max-width: 800px) {
+      font-size: 45%
+    }
+    @media only screen and (max-width: 724px) {
+      font-size: 40%
+    }
+    @media only screen and (max-width: 664px) {
       font-size: 45%
     }
   }
@@ -92,13 +128,45 @@ body {
     @include respond(tab-land) {
       font-size: 100%
     }
+    @media only screen and (max-width: 360px) {
+      font-size: 70%
+    }
+  }
+  &__contact-h3 {
+    @media only screen and (max-width: 360px) {
+      font-size: 60%;
+    }
   }
   &__contact-input::placeholder {
-    font-weight: 400
+    font-weight: 400;
+    @media only screen and (max-width: 360px) {
+      font-size: 70%
+    }
+  }
+  &__contact-description::placeholder {
+    @media only screen and (max-width: 360px) {
+      font-size: 70%
+    }
   }
   &__contact-label {
     font-size: 80%;
     font-weight: 400;
+    @media only screen and (max-width: 360px) {
+      font-size: 70%;
+    }
+  }
+  &__form-btn {
+    @media only screen and (max-width: 360px) {
+      font-size: 150%
+    }
+  }
+  &__contact-btnarea {
+    @media only screen and (max-width: 664px) {
+      font-size: 90%;
+    }
+    @media only screen and (max-width: 360px) {
+      font-size: 40%;
+    }
   }
 }
 
@@ -106,10 +174,16 @@ body {
   &__header {
     font-size: 190%;
     font-weight: 700;
+    @media only screen and (max-width: 360px) {
+      font-size: 100%
+    }
   }
   &__card-header {
     font-weight: 700;
     font-size: 100%;
+    @media only screen and (max-width: 360px) {
+      font-size: 60%
+    }
   }
   &__card-paragraph {
     font-weight: 200;
@@ -123,6 +197,12 @@ body {
     @media only screen and (max-width: 768px) {
       font-size: 120%;
     }
+    @media only screen and (max-width: 664px) {
+      font-size: 110%
+    }
+    @media only screen and (max-width: 360px) {
+      font-size: 60%
+    }
   }
 }
 
@@ -130,10 +210,16 @@ body {
   &__header {
     font-weight: 700;
     font-size: 160%;
+    @media only screen and (max-width: 360px) {
+      font-size: 80%
+    }
   }
   &__header-sub {
     font-weight: 400;
     font-size: 90%;
+    @media only screen and (max-width: 360px) {
+      font-size: 60%;
+    }
   }
   &__item-name {
     font-weight: 700;
@@ -145,6 +231,9 @@ body {
     @include respond(tab-land) {
       font-size: 100%;
     }
+    @media only screen and (max-width: 360px) {
+      font-size: 60%
+    }
   }
 }
 
@@ -152,16 +241,25 @@ body {
   &__header {
     font-weight: 700;
     font-size: 160%;
+    @media only screen and (max-width: 360px) {
+      font-size: 100%
+    }
   }
   &__header-sub {
     font-weight: 400;
     font-size: 80%;
+    @media only screen and (max-width: 360px) {
+      font-size: 50%
+    }
   }
   &__category {
     font-weight: 200;
     font-size: 75%;
     @include respond(tab-land) {
       font-size: 80%
+    }
+    @media only screen and (max-width: 360px) {
+      font-size: 45%
     }
   }
   &__card-figcaption {
@@ -171,12 +269,18 @@ body {
       @include respond(tab-land) {
         font-size: 130%
       }
+      @media only screen and (max-width: 360px) {
+        font-size: 70%
+      }
     }
     &-sub {
       font-weight: 200;
       font-size: 75%;
       @include respond(tab-land) {
         font-size: 90%;
+      }
+      @media only screen and (max-width: 360px) {
+        font-size: 60%
       }
     }
   }
@@ -189,11 +293,17 @@ body {
     @include respond(tab-land) {
       font-size: 180%
     }
+    @media only screen and (max-width: 360px) {
+      font-size: 100%
+    }
     &-sub {
       font-weight: 400;
       font-size: 90%;
       @include respond(tab-land) {
         font-size: 120%
+      }
+      @media only screen and (max-width: 360px) {
+        font-size: 60%
       }
     }
   }
@@ -201,6 +311,9 @@ body {
     font-size: 62%;
     @include respond(tab-land) {
       font-size: 100%
+    }
+    @media only screen and (max-width: 360px) {
+      font-size: 50%
     }
   }
   &__name {
@@ -212,11 +325,20 @@ body {
     @include respond(tab-land) {
       font-size: 120%
     }
+    @media only screen and (max-width: 360px) {
+      font-size: 80%
+    }
   }
   &__preview {
     font-size: 78%;
     @include respond(tab-land) {
       font-size: 150%
+    }
+    @media only screen and (max-width: 600px) {
+      font-size: 100%;
+    }
+    @media only screen and (max-width: 360px) {
+      font-size: 60%
     }
   }
   &__btn {
@@ -225,5 +347,14 @@ body {
     @include respond(tab-land) {
       font-size: 90%
     }
+    @media only screen and (max-width: 360px) {
+      font-size: 60%
+    }
   }
+}
+
+.header__navslider {
+  &-list__item,
+  &-list__item:link,
+  &-link__item:visited {}
 }

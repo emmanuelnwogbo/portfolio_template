@@ -41,19 +41,28 @@
     align-self: center;
     text-align: center;
     color: $primary-color-1;
+    @media only screen and (max-width: 360px) {
+      margin: .5rem;
+    }
   }
   &__header-sub {
     width: 70%;
     align-self: center;
     text-align: center;
+    @media only screen and (max-width: 360px) {
+      width: 90%
+    }
   }
   &__content {
     position: relative;
     width: 100%;
-    display: flex; //flex-wrap: wrap;
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 2.5rem;
+    @media only screen and (max-width: 664px) {
+      flex-wrap: wrap;
+    }
   }
   &__flipper {
     position: absolute;
@@ -68,6 +77,9 @@
     }
     @media only screen and (max-width: 768px) {
       transform: translateX(-175%);
+    }
+    @media only screen and (max-width: 664px) {
+      transform: translateX(0);
     }
   }
   &__flipper:checked~&__content &__item-firstrow {
@@ -93,6 +105,9 @@
     @media only screen and (max-width: 768px) {
       transform: translateX(175%);
     }
+    @media only screen and (max-width: 664px) {
+      transform: translateX(0);
+    }
   }
   &__item {
     padding: .8rem .8rem 0rem 0.8rem; //width: 29%;
@@ -103,12 +118,18 @@
     border-radius: 1%;
     box-shadow: 0 1px 27px -3px rgba(0, 0, 0, .2);
     transition: $primary-transition;
+    @media only screen and (max-width: 664px) {
+      flex-basis: 80%;
+    }
   }
   &__item-firstrow {}
   &__item-secondrow {
     z-index: -1;
     visibility: hidden;
     opacity: 0;
+    @media only screen and (max-width: 664px) {
+      display: none;
+    }
   }
   &__item-name {
     color: $primary-color-1;
@@ -137,6 +158,9 @@
     padding: .2rem;
     border: 2px solid $primary-color-1;
     background: #fff;
+    @media only screen and (max-width: 664px) {
+      display: none;
+    }
   }
   &__navigation-listitem-firstrow {
     background: $primary-color-1;

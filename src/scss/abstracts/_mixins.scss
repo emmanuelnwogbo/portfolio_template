@@ -8,6 +8,9 @@
   @include respond(tab-land) {
     width: 90%;
   }
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 @mixin baseFlexStyle {
