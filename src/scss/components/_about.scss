@@ -86,7 +86,10 @@
     flex-direction: column;
     --webkit-backface-visibility: hidden;
     backface-visibility: hidden; //transform: rotateY(180deg);
-    transition: all .3s cubic-bezier(.17, .67, .83, .67)
+    transition: all .3s cubic-bezier(.17, .67, .83, .67);
+    @include respond(tab-land) {
+      width: 50%;
+    }
   }
   &__skills-h4 {
     position: relative;
@@ -132,6 +135,18 @@
     height: 5rem;
     width: 5rem;
     transform: translateY(.1rem);
+    @include respond(tab-land) {
+      height: 4rem;
+      width: 4rem;
+    }
+    @media only screen and (max-width: 800px) {
+      height: 3.5rem;
+      width: 3.5rem;
+    }
+    @media only screen and (max-width: 768px) {
+      height: 3rem;
+      width: 3rem;
+    }
   }
   &__contact {
     position: absolute;
@@ -149,6 +164,9 @@
     --webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: all .3s cubic-bezier(.17, .67, .83, .67);
+    @include respond(tab-land) {
+      width: 50%;
+    }
   }
   &__contact-h3 {
     position: relative;
@@ -304,6 +322,9 @@
     background: linear-gradient(to right bottom, $primary-color-1, $primary-color-1);
     box-shadow: $btn-box-shadow;
     transition: $primary-transition;
+    @include respond(tab-land) {
+      width: 25%;
+    }
     &:hover {
       cursor: pointer;
       transform: translateY(-.3rem);
@@ -334,6 +355,15 @@
     background: transparent;
     box-shadow: $btn-box-shadow;
     transition: $primary-transition;
+    @include respond(tab-land) {
+      width: 25%;
+    }
+    @media only screen and (max-width: 800px) {
+      width: 30%
+    }
+    @media only screen and (max-width: 768px) {
+      width: 30%
+    }
     &:hover {
       cursor: pointer;
       transform: translateY(-.3rem);

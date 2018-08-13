@@ -27,6 +27,12 @@
     width: 42%;
     align-self: center;
     margin-bottom: 1.5rem;
+    @media only screen and (max-width: 800px) {
+      width: 60%
+    }
+    @media only screen and (max-width: 768px) {
+      width: 60%
+    }
   }
   &__categories {
     display: flex;
@@ -37,6 +43,12 @@
     margin-bottom: 1.8rem;
     padding: 2rem 2.5rem;
     transform: translateX(-.2rem) translateY(-1rem);
+    @include respond(tab-land) {
+      width: 80%;
+    }
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
   &__categories-item {
     display: inline-block;
@@ -114,6 +126,9 @@
     box-shadow: 0 1px 27px -3px rgba(0, 0, 0, .2);
     overflow: hidden;
     transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    @include respond(tab-land) {
+      width: 100%
+    }
     &:hover {
       cursor: pointer;
     }
@@ -122,6 +137,9 @@
     }
     &:hover &-fig::after {
       height: 50%;
+      @include respond(tab-land) {
+        height: 35%;
+      }
     }
     &:hover &-figcaption {
       transform: translate(0);
@@ -149,6 +167,9 @@
       transition: all .2s cubic-bezier(0.165, 0.84, 0.44, 1);
       padding: .5rem 0;
       margin: 0;
+      @include respond(tab-land) {
+        visibility: hidden;
+      }
     }
     &::after {
       content: '';
@@ -160,6 +181,10 @@
       background: rgba($primary-color-3, 0.5);
       z-index: 2000;
       transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      @include respond(tab-land) {
+        height: 35%;
+        background: rgba($primary-color-3, 0.9);
+      }
     }
   }
   &__card-figcaption {
@@ -175,10 +200,20 @@
     &-header {
       top: 40%;
       transform: translateX(-800%);
+      @include respond(tab-land) {
+        top: 75%;
+        opacity: 1;
+        transform: translate(0);
+      }
     }
     &-sub {
-      bottom: 35%;
+      bottom: 40%;
       transform: translateY(800%);
+      @include respond(tab-land) {
+        bottom: 10%;
+        opacity: 1;
+        transform: translate(0);
+      }
     }
   }
   &__card-img {

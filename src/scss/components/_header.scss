@@ -12,13 +12,33 @@
     color: $primary-color-2;
     margin: 0 7rem;
     cursor: pointer;
-    transition: $primary-transition
+    transition: $primary-transition;
+    @include respond(tab-land) {
+      margin: 3rem 7rem
+    }
+    @media only screen and (max-width: 800px) {
+      margin: 3rem 1rem
+    }
+    @media only screen and (max-width: 768px) {
+      margin: 3rem 1rem
+    }
   }
   &__nav {
     position: absolute;
     width: 35%;
     right: 10%;
     top: 1%;
+    @include respond(tab-land) {
+      width: 45%;
+      right: 3%;
+      top: 4%;
+    }
+    @media only screen and (max-width: 800px) {
+      width: 50%;
+    }
+    @media only screen and (max-width: 768px) {
+      width: 40%;
+    }
   }
   &__nav-list {
     display: flex;
@@ -61,7 +81,13 @@
     align-self: center;
     margin-top: 10rem;
     text-align: center;
-    color: $primary-color-1
+    color: $primary-color-1;
+    @include respond(tab-land) {
+      margin-top: 11rem;
+    }
+    @media only screen and (max-width: 768px) {
+      margin-top: 7rem;
+    }
   }
   &__intro-h4 {}
   &__intro-h3 {
@@ -93,6 +119,11 @@
     border: 3px solid #fff;
     background: rgba($color-grey-dark-2, 0.8);
     @include bounce;
+    @include respond(tab-land) {
+      margin-top: 20%;
+      height: 3.5rem;
+      width: 2rem;
+    }
   }
   &__intro-mouse:hover {
     cursor: pointer;

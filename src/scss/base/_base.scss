@@ -8,6 +8,9 @@
 
 html {
   font-size: 112.5%;
+  @include respond(tab-land) {
+    font-size: 110%
+  }
 }
 
 body {

@@ -7,6 +7,16 @@
   width: 75vw;
   min-height: 75vh;
   text-align: center;
+  @include respond(tab-land) {
+    width: 95vw;
+    min-height: 50vh;
+  }
+  @media only screen and (max-width: 800px) {
+    width: 100vw;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 100vw;
+  }
   &__section {
     background: $header-background-gradient;
     transform: translateY(-6rem);
@@ -53,6 +63,12 @@
   }
   &__flipper:checked~&__content &__item {
     transform: translateX(-170%);
+    @media only screen and (max-width: 800px) {
+      transform: translateX(-175%);
+    }
+    @media only screen and (max-width: 768px) {
+      transform: translateX(-175%);
+    }
   }
   &__flipper:checked~&__content &__item-firstrow {
     z-index: -1;
@@ -71,6 +87,12 @@
   }
   &__content &__item {
     transform: translateX(165%);
+    @media only screen and (max-width: 800px) {
+      transform: translateX(175%);
+    }
+    @media only screen and (max-width: 768px) {
+      transform: translateX(175%);
+    }
   }
   &__item {
     padding: .8rem .8rem 0rem 0.8rem; //width: 29%;

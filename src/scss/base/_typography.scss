@@ -9,39 +9,89 @@ body {
   &__title {
     font-weight: 700;
     font-size: 120%;
+    @include respond(tab-land) {
+      font-size: 150%
+    }
   }
   &__nav-list__item {
     font-size: 68%;
     font-weight: 500;
+    @include respond(tab-land) {
+      font-size: 80%
+    }
+    @media only screen and (max-width: 800px) {
+      font-size: 65%;
+    }
+    @media only screen and (max-width: 768px) {
+      font-size: 60%;
+    }
   }
   &__intro-h3 {
     font-weight: 700;
     font-size: 350%;
+    @include respond(tab-land) {
+      font-size: 500%
+    }
+  }
+  &__intro-h4 {
+    @include respond(tab-land) {
+      font-size: 130%
+    }
+  }
+  &__intro-about {
+    @include respond(tab-land) {
+      font-size: 120%
+    }
   }
   &__intro-btn,
   &__intro-btn:link,
   &__intro-btn:visited {
     font-weight: 400;
     font-size: 80%;
+    @include respond(tab-land) {
+      font-size: 95%
+    }
+  }
+  &__intro-mouse,
+  &__intro-mouse:link,
+  &__intro-mouse:visited {
+    @include respond(tab-land) {
+      font-size: 150%
+    }
   }
 }
 
 .about {
   font-size: 87%;
   &__bio {
-    width: 50%;
-    text-align: left;
+    @include respond(tab-land) {
+      font-size: 100%
+    }
   }
   &__bio-h3 {
     font-size: 170%;
-    font-weight: 700
+    font-weight: 700;
+    @include respond(tab-land) {
+      font-size: 120%
+    }
   }
   &__bio-h4 {
     font-weight: 700;
   }
+  &__contact-btn {
+    @include respond(tab-land) {
+      font-size: 80%
+    }
+    @media only screen and (max-width: 800px) {
+      font-size: 45%
+    }
+  }
   &__skills-h4 {
     font-weight: 700;
     font-size: 120%;
+    @include respond(tab-land) {
+      font-size: 100%
+    }
   }
   &__contact-input::placeholder {
     font-weight: 400
@@ -64,6 +114,15 @@ body {
   &__card-paragraph {
     font-weight: 200;
     font-size: 78%;
+    @include respond(tab-land) {
+      font-size: 100%;
+    }
+    @media only screen and (max-width: 800px) {
+      font-size: 120%;
+    }
+    @media only screen and (max-width: 768px) {
+      font-size: 120%;
+    }
   }
 }
 
@@ -83,6 +142,9 @@ body {
   &__item-content {
     font-weight: 200;
     font-size: 75%;
+    @include respond(tab-land) {
+      font-size: 100%;
+    }
   }
 }
 
@@ -93,20 +155,29 @@ body {
   }
   &__header-sub {
     font-weight: 400;
-    font-size: 90%;
+    font-size: 80%;
   }
   &__category {
     font-weight: 200;
     font-size: 75%;
+    @include respond(tab-land) {
+      font-size: 80%
+    }
   }
   &__card-figcaption {
     &-header {
       font-weight: 500;
       font-size: 90%;
+      @include respond(tab-land) {
+        font-size: 130%
+      }
     }
     &-sub {
       font-weight: 200;
       font-size: 75%;
+      @include respond(tab-land) {
+        font-size: 90%;
+      }
     }
   }
 }
@@ -115,13 +186,22 @@ body {
   &__header {
     font-weight: 700;
     font-size: 160%;
+    @include respond(tab-land) {
+      font-size: 180%
+    }
     &-sub {
       font-weight: 400;
       font-size: 90%;
+      @include respond(tab-land) {
+        font-size: 120%
+      }
     }
   }
   &__details {
-    font-size: 62%
+    font-size: 62%;
+    @include respond(tab-land) {
+      font-size: 100%
+    }
   }
   &__name {
     font-weight: 500;
@@ -129,12 +209,21 @@ body {
   &__h4 {
     font-weight: 500;
     font-size: 100%;
+    @include respond(tab-land) {
+      font-size: 120%
+    }
   }
   &__preview {
-    font-size: 78%
+    font-size: 78%;
+    @include respond(tab-land) {
+      font-size: 150%
+    }
   }
   &__btn {
     font-size: 60%;
     font-weight: 400;
+    @include respond(tab-land) {
+      font-size: 90%
+    }
   }
 }
