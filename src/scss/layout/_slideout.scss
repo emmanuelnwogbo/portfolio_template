@@ -5,13 +5,19 @@
   height: 100%;
   width: 50%;
   z-index: 9000;
-  background: rgba($primary-color-3, 0.7);
+  background: linear-gradient(to right bottom, $primary-color-3, $primary-color-2);
   display: none;
   padding: 5rem 0;
   transform: translateX(100%);
   transition: all .2s cubic-bezier(0.165, 0.84, 0.44, 1);
   @media only screen and (max-width: 600px) {
     display: block
+  }
+  @media only screen and (max-width: 480px) {
+    padding: 1rem 0;
+  }
+  @media only screen and (max-width: 384px) {
+    padding: 1rem 0;
   }
   @media only screen and (max-width: 360px) {
     padding: 1.5rem 0;
@@ -22,10 +28,16 @@
     right: 3%;
     width: 8%;
     height: 3%;
-    z-index: 7000;
+    z-index: 8000;
     display: none;
     @media only screen and (max-width: 600px) {
       display: block
+    }
+    @media only screen and (max-width: 480px) {
+      padding: 3%;
+    }
+    @media only screen and (max-width: 384px) {
+      padding: 3%;
     }
     @media only screen and (max-width: 360px) {
       height: 4%;
@@ -62,6 +74,8 @@
     right: 0;
     top: 0;
     z-index: 9000;
+    display: none;
+    z-index: -1;
   }
   &-toggle:checked~& {
     transform: translateX(0);
@@ -79,10 +93,16 @@
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
-    background: rgba($primary-color-3, .9);
     transition: $primary-transition;
     margin: 1rem;
-    @media only screen and (max-width: 360px) {
+    @media only screen and (max-width: 630px) {
+      padding: .3rem;
+    }
+    @media only screen and (max-width: 480px) {
+      padding: .3rem;
+      margin: .3rem;
+    }
+    @media only screen and (max-width: 384px) {
       padding: .3rem;
       margin: .3rem;
     }

@@ -1,5 +1,6 @@
 import '../scss/main.scss';
-const aboutflipper = document.getElementById('about__flipper'),
+const container = document.getElementById('container'),
+  aboutflipper = document.getElementById('about__flipper'),
   aboutContactBtn = document.getElementById('about__contact-btn'),
   aboutFormReturnBtn = document.getElementById('about__form-return'),
   leftReviewBtn = document.getElementById('reviews__navigation-listitem-firstrow'),
@@ -9,7 +10,26 @@ const aboutflipper = document.getElementById('about__flipper'),
   reviewSlideBtns = [leftReviewBtn, rightReviewBtn, reviewFlipper],
   portfolioProjects = Array.from(document.getElementsByClassName('portfolio__card')),
   categoryBtns = Array.from(document.getElementsByClassName('portfolio__categories-item')),
-  portfolioCardSwitch = document.getElementById('portfolio__cards-switch');
+  portfolioCardSwitch = document.getElementById('portfolio__cards-switch'),
+  slideMenuIcon = document.getElementById('header__navslider-btn'),
+  slideMenuCheckBox = document.getElementById('header__navslider-toggle'),
+  slideMenuItems = document.getElementsByClassName('header__navslider-list__item');
+
+container.addEventListener('click', function () {
+  slideMenuCheckBox.checked = false;
+})
+
+Array.from(slideMenuItems, item => {
+  item.addEventListener('click', function (e) {
+    e.preventDefault();
+    slideMenuCheckBox.checked = false;
+  });
+});
+
+slideMenuIcon.addEventListener('click', function (e) {
+  e.preventDefault();
+  slideMenuCheckBox.checked = true;
+});
 
 [aboutFlipBtns, reviewSlideBtns].forEach(arr => {
   arr.forEach(btn => {

@@ -52,6 +52,12 @@
     @media only screen and (max-width: 768px) {
       width: 100%;
     }
+    @media only screen and (max-width: 480px) {
+      padding: .7rem .5rem;
+    }
+    @media only screen and (max-width: 384px) {
+      padding: .7rem .5rem;
+    }
     @media only screen and (max-width: 360px) {
       padding: .7rem .5rem;
     }
@@ -78,6 +84,12 @@
     transition: $primary-transition;
     margin: .2rem;
     @include clearfix;
+    @media only screen and (max-width: 480px) {
+      padding: .5rem;
+    }
+    @media only screen and (max-width: 384px) {
+      padding: .5rem;
+    }
     @media only screen and (max-width: 360px) {
       padding: .5rem;
     }
@@ -213,6 +225,9 @@
         top: 75%;
         opacity: 1;
         transform: translate(0);
+      }
+      @media only screen and (max-width: 330px) {
+        top: 70%;
       }
     }
     &-sub {
